@@ -1,0 +1,33 @@
+/* The Floating Island Container */
+.island-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(25, 25, 35, 0.75); /* Dark glassmorphism style */
+    backdrop-filter: blur(12px);         /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;                 /* Pill/Island shape */
+    padding: 10px 24px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Nav Links Styling */
+.island-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.island-nav a:hover, 
+.island-nav a.active {
+    color: #64ffda; /* Accent color on hover/active */
+}

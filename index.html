@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+<div id="nav-placeholder"></div>
 
 <h1>Muhammad Afiq Bin Pathori</h1>
 <p>This is my portfolio</p>
@@ -12,6 +13,24 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowfullscreen>
     </iframe>
+	
+	
+	<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+            
+            // Optional: Automatically highlight the current page link
+            const currentPage = window.location.pathname.split("/").pop() || "index.html";
+            const links = document.querySelectorAll('.island-nav a');
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+	</script>
 
 </body>
 </html>
