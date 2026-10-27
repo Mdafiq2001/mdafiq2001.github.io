@@ -2,6 +2,19 @@
 <html>
 <head>
 <link rel="stylesheet" href="navbar.css">
+    <meta charset="UTF-8">
+    <title>Center All Content</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;  /* Stacks items vertically inside the body */
+            justify-content: center; /* Centers elements vertically */
+            align-items: center;     /* Centers elements horizontally */
+            text-align: center;      /* Centers inline text inside elements */
+            min-height: 100vh;       /* Makes the body span the full height of the viewport */
+            margin: 0;               /* Removes default browser spacing */
+        }
+    </style>
 </head>
 <body>
 <div id="nav-placeholder"></div>
