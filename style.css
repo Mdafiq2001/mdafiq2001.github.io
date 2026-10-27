@@ -1,0 +1,9 @@
+hr {
+    border: none;              /* Removes the default 3D browser border */
+    height: 2px;               /* Controls the thickness of the line */
+    background-color: #525252; /* Sets your custom color */
+    margin: 40px 0;            /* Adds breathing room above and below the line */
+    width: 80%;                /* Optional: Makes it narrower than the full screen */
+    margin-left: auto;         /* Centers it if you give it a custom width */
+    margin-right: auto;
+}
