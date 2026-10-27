@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="navbar.css">
+    <meta charset="UTF-8">
+    <title>Center All Content</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;  /* Stacks items vertically inside the body */
+            justify-content: center; /* Centers elements vertically */
+            align-items: center;     /* Centers elements horizontally */
+            text-align: center;      /* Centers inline text inside elements */
+            min-height: 100vh;       /* Makes the body span the full height of the viewport */
+            margin: 0;               /* Removes default browser spacing */
+        }
+    </style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<h1>About</h1>
+<p>I'm feeling bricked up at the moment</p>	
+	
+	<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+            
+            // Optional: Automatically highlight the current page link
+            const currentPage = window.location.pathname.split("/").pop() || "index.html";
+            const links = document.querySelectorAll('.island-nav a');
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+	</script>
+
+</body>
+</html>
