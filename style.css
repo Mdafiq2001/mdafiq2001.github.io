@@ -7,3 +7,34 @@ hr {
     margin-left: auto;         /* Centers it if you give it a custom width */
     margin-right: auto;
 }
+
+/* The Parallax Background Container */
+.parallax-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -99; /* Pushes the background behind all your content */
+    overflow: hidden;
+}
+
+/* The actual image with the blur effect */
+.parallax-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the screen without distorting */
+    filter: blur(8px); /* Adjust the pixel strength of the blur here */
+    transform: scale(1.1); /* Slightly scales up the image to hide blurred edge artifacts */
+}
+
+/* Optional overlay to darken or tint the background for better text readability */
+.parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adjust opacity for darkness */
+    z-index: -98;
+}
