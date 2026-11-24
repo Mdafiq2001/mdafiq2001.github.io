@@ -17,24 +17,30 @@ hr {
     height: 100vh;
     z-index: -99; /* Pushes the background behind all your content */
     overflow: hidden;
+    background-color: #0f1117; /* Fallback dark base behind the scaled image */
 }
 
-/* The actual image with the blur effect */
+/* The actual image with the blur and dimming effect */
 .parallax-bg img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures the image covers the screen without distorting */
-    filter: blur(8px); /* Adjust the pixel strength of the blur here */
+    filter: blur(10px) brightness(0.75); /* Stronger blur + tames bright highlights */
     transform: scale(1.1); /* Slightly scales up the image to hide blurred edge artifacts */
 }
 
-/* Optional overlay to darken or tint the background for better text readability */
+/* Darker overlay to guarantee white text contrast */
 .parallax-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Adjust opacity for darkness */
-    z-index: -98;
+    background: rgba(10, 12, 18, 0.65); /* Deep dark tint (adjust 0.65 between 0.55 and 0.75) */
+    z-index: 1; /* Sits above .parallax-bg img inside .parallax-bg */
+}
+
+/* Optional: Subtle drop shadow on standalone white text for extra legibility */
+h1, h2, h3, p {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
 }

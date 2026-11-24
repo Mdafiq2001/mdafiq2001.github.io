@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="navbar.css">
+<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>MdAfiq2001's Portfolio</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;  /* Stacks items vertically inside the body */
+            /*justify-content: center; Centers elements vertically */
+            align-items: center;     /* Centers elements horizontally */
+            text-align: center;      /* Centers inline text inside elements */
+            min-height: 100vh;       /* Makes the body span the full height of the viewport */
+            margin: 0;               /* Removes default browser spacing */
+			color: #F8F9FA;
+        }
+    </style>
+</head>
+<body>
+
+	<div id="nav-placeholder"></div>
+
+	<div class="parallax-bg">
+        <img src="backgrounds/uchiura_view.jpg" alt="Background">
+        <div class="parallax-overlay"></div>
+    </div>
+	<h1>Projects Done In Polytechnic</h1>
+	<hr>
+	<p>
+		Time Period: 2018-2021<br>
+		Course: Diploma in Game Development and Technology<br>
+		School: Nanyang Polytechnic		
+	</p>
+	<hr>
+	<h2>Final Year Project</h2>
+	
+	<!--Sample Video Embedding-->
+	<iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/2Ufv7Fdk_g4" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+    </iframe>
+	
+	<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+            
+            // Optional: Automatically highlight the current page link
+            const currentPage = window.location.pathname.split("/").pop() || "index.html";
+            const links = document.querySelectorAll('.island-nav a');
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+	</script>
+
+</body>
+</html>

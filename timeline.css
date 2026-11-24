@@ -1,0 +1,120 @@
+.page-header {
+    text-align: center;
+    margin: 30px 20px 10px;
+}
+
+.page-header h1 {
+    margin-bottom: 8px;
+    font-size: 2.2rem;
+}
+
+.page-header p {
+    color: #cbd5e1;
+    margin-top: 0;
+}
+
+/* Timeline Container */
+.timeline {
+    position: relative;
+    max-width: 750px;
+    width: 90%;
+    margin: 40px auto 80px;
+    padding-left: 40px; /* Space on the left for the vertical line & dots */
+    box-sizing: border-box;
+}
+
+/* The Vertical Line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 14px;
+    width: 3px;
+    background: linear-gradient(to bottom, #64ffda, rgba(100, 255, 218, 0.2));
+    border-radius: 2px;
+}
+
+/* Individual Milestone Wrapper */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    text-align: left; /* Keeps card text readable instead of centered */
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Glowing Node Circle on the Line */
+.timeline-dot {
+    position: absolute;
+    left: -34px; /* Aligns center of dot with the 14px vertical line */
+    top: 24px;
+    width: 14px;
+    height: 14px;
+    background-color: #191923;
+    border: 3px solid #64ffda;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(100, 255, 218, 0.7);
+    z-index: 1;
+}
+
+/* Frosted Glass Card */
+.timeline-card {
+    background: rgba(25, 25, 35, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 24px 28px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(100, 255, 218, 0.45);
+}
+
+.timeline-date {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #64ffda;
+    margin-bottom: 6px;
+}
+
+.timeline-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.timeline-card p {
+    margin: 0 0 20px;
+    line-height: 1.6;
+    color: #d1d5db;
+    font-size: 0.95rem;
+}
+
+/* Action Button */
+.timeline-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: rgba(100, 255, 218, 0.12);
+    color: #64ffda;
+    border: 1px solid #64ffda;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.timeline-btn:hover {
+    background-color: #64ffda;
+    color: #191923;
+}

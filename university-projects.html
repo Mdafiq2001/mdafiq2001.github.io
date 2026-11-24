@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="navbar.css">
+<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>MdAfiq2001's Portfolio</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;  /* Stacks items vertically inside the body */
+            /*justify-content: center; Centers elements vertically */
+            align-items: center;     /* Centers elements horizontally */
+            text-align: center;      /* Centers inline text inside elements */
+            min-height: 100vh;       /* Makes the body span the full height of the viewport */
+            margin: 0;               /* Removes default browser spacing */
+			color: #F8F9FA;
+        }
+    </style>
+</head>
+<body>
+
+	<div id="nav-placeholder"></div>
+
+	<div class="parallax-bg">
+        <img src="backgrounds/asakusa.jpg" alt="Background">
+        <div class="parallax-overlay"></div>
+    </div>
+	<h1>Projects Done In University</h1>
+	<hr>
+	<p>
+		Time Period: 2024-2028<br>
+		Course: Bachelors in Science in Computer Science in Interactive Media and Game Development<br>
+		School: Digipen Institute of Technology Singapore@Singapore Institute of Technology
+		
+	</p>
+	
+	<script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+            
+            // Optional: Automatically highlight the current page link
+            const currentPage = window.location.pathname.split("/").pop() || "index.html";
+            const links = document.querySelectorAll('.island-nav a');
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+	</script>
+
+</body>
+</html>

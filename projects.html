@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="navbar.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="timeline.css">
     <meta charset="UTF-8">
     <title>MdAfiq2001's Portfolio</title>
     <style>
@@ -14,23 +15,56 @@
             text-align: center;      /* Centers inline text inside elements */
             min-height: 100vh;       /* Makes the body span the full height of the viewport */
             margin: 0;               /* Removes default browser spacing */
+			color: #F8F9FA;
         }
     </style>
 </head>
 <body>
-<div id="nav-placeholder"></div>
+	<div id="nav-placeholder"></div>
+	
+	<div class="parallax-bg">
+        <img src="backgrounds/sensoji_gate.jpg" alt="Background">
+        <div class="parallax-overlay"></div>
+    </div>
+	
+	<header class="page-header">
+        <h1>Projects I've Done</h1>
+        <p>Below are the projects I've done along the way, separated by the parts of my life</p>
+    </header>
+	
+	<!-- Vertical Timeline -->
+    <main class="timeline">
+        
+        <!-- Node 1: University -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <span class="timeline-date">University Days (SIT/Digipen 2024-2028)</span>
+                <h2>Interactive Media and Game Development</h2>
+                <p>
+                    Where I continued my game development journey, reinforcing my foundations in C++ and worked on
+					more parts of game development.
+                </p>
+                <a href="university-projects.html" class="timeline-btn">View University Projects &rarr;</a>
+            </div>
+        </div>
 
-<h1>Dis are the projects I've done</h1>
-<hr>
-<p>Made throughout my student life</p>
+        <!-- Node 2: Polytechnic -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+                <span class="timeline-date">Polytechnic Days (NYP 2018-2021)</span>
+                <h2>Game Development and Technology</h2>
+                <p>
+                    The start of it all, where I developed my foundations in C++ and touched
+					various parts of game development including design, systems architecture,
+					graphics, and more.
+                </p>
+                <a href="polytechnic-projects.html" class="timeline-btn">View Polytechnic Projects &rarr;</a>
+            </div>
+        </div>
 
-	<iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/2Ufv7Fdk_g4" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-    </iframe>
+    </main>
 	
 	
 	<script>
