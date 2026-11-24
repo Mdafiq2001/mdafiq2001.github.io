@@ -37,3 +37,15 @@ body {
 .island-nav a.active {
     color: #64ffda; 
 }
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* Adjust this number to make the buttons closer or further apart */
+}
+
+.island-nav .nav-brand {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
