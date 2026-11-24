@@ -26,24 +26,55 @@
         <img src="backgrounds/uchiura_view.jpg" alt="Background">
         <div class="parallax-overlay"></div>
     </div>
-	<h1>Projects Done In Polytechnic</h1>
-	<hr>
-	<p>
-		Time Period: 2018-2021<br>
-		Course: Diploma in Game Development and Technology<br>
-		School: Nanyang Polytechnic		
-	</p>
-	<hr>
-	<h2>Final Year Project</h2>
-	
-	<!--Sample Video Embedding-->
-	<iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/2Ufv7Fdk_g4" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-    </iframe>
+	<header class="era-header">
+        <a href="projects.html" class="back-link">&larr; Back to Timeline</a>
+        <h1>Projects Done In Polytechnic</h1>
+        <hr>
+        <p class="era-meta">
+            Time Period: 2018–2021<br>
+            Course: Diploma in Game Development and Technology<br>
+            School: Nanyang Polytechnic
+        </p>
+    </header>
+
+	<main class="projects-container">
+
+        <article class="project-box">
+            <h2>Final Year Project (2020)</h2>
+            <p>
+                Done in collaboration with Tan Tock Seng Hospital, developed in Unity to spread awareness of Covid-19 at the height of the pandemic.
+            </p>
+			<p>
+				Undertook the role of the lead programmer, worked with designers and a programmer to make a game that is based on Plague Inc, where players
+				are to mitigate the spread of the virus instead of spreading it. Made with the purpose of spreading awareness about the different ways
+				to protect oneself against the virus.
+			</p>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/g9u6xhv4PA4"
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </article>
+
+        <!-- Copy and paste this block for additional projects -->
+        <article class="project-box">
+            <h2>Independent Work Project (2020)</h2>
+            <p>
+                Done as a graded solo project with the intent of trying to recreate a fighting game. Developed in Unity to make a simple fighting game loop.
+            </p>            
+			<div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/2Ufv7Fdk_g4"
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </article>
+    </main>
 	
 	<script>
     fetch('navbar.html')
