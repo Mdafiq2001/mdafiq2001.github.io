@@ -14,17 +14,22 @@
             text-align: center;      /* Centers inline text inside elements */
             min-height: 100vh;       /* Makes the body span the full height of the viewport */
             margin: 0;               /* Removes default browser spacing */
+			color: #F8F9FA;
         }
     </style>
 </head>
 <body>
-<div id="nav-placeholder"></div>
+	<div id="nav-placeholder"></div>
 
-<h1>About Me</h1>
-<hr>
-<p>Afiq is a student with an interest in game development</p>
-<h2>Hobbies:</h2>
-<p>Playing Games, Reading Manga, Watching Anime, Travelling, Photography</p>
+	<div class="parallax-bg">
+        <img src="backgrounds/uchiura_shrine.jpg" alt="Background">
+        <div class="parallax-overlay"></div>
+    </div>
+	<h1>About Me</h1>
+	<hr>
+	<p>Afiq is a student with an interest in game development</p>
+	<h2>Hobbies:</h2>
+	<p>Playing Games, Reading Manga, Watching Anime, Travelling, Photography</p>
 	
 	<script>
     fetch('navbar.html')
